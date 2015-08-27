@@ -1,5 +1,6 @@
 {
   "main": "app.js",
+  "description": "a module for spying on function calls",
   "scripts": {
     "test": "mocha --reporter spec"
   },

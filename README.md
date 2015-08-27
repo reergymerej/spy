@@ -1,9 +1,9 @@
-# spy [![Build Status][travis-image]][travis-url]
+# yps [![Build Status][travis-image]][travis-url]
 
 a module for spying on function calls
 
 ```js
-var spy = require('./app.js');
+var spy = require('yps');
 var obj = { foo: function () {} };
 
 spy(obj, 'foo');
@@ -17,7 +17,6 @@ console.log(obj.foo.calls[1]);  // [4]
 console.log(obj.foo.calls[2]);  // [5, 6, 7, 8, 9]
 
 ```
-
 
 [travis-image]: https://travis-ci.org/reergymerej/spy.svg
 [travis-url]: https://travis-ci.org/reergymerej/spy
