@@ -1,4 +1,4 @@
-# yps [![Build Status][travis-image]][travis-url]
+# yps [![Build Status][travis-image]][travis-url] [![npm version][npm-image]][npm-url]
 
 a module for spying on function calls
 
@@ -20,3 +20,5 @@ console.log(obj.foo.calls[2]);  // [5, 6, 7, 8, 9]
 
 [travis-image]: https://travis-ci.org/reergymerej/spy.svg
 [travis-url]: https://travis-ci.org/reergymerej/spy
+[npm-image]: https://badge.fury.io/js/yps.svg
+[npm-url]: (http://badge.fury.io/js/yps)
