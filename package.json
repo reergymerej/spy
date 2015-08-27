@@ -1,6 +1,5 @@
 {
   "main": "app.js",
-  "description": "a module for spying on function calls",
   "scripts": {
     "test": "mocha --reporter spec"
   },
@@ -12,7 +11,8 @@
     "willy": "^1.0.1"
   },
   "name": "yps",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "description": "a module for spying on function calls",
   "directories": {
     "test": "test"
   },
