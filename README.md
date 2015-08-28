@@ -1,6 +1,8 @@
-# yps [![Build Status][travis-image]][travis-url] [![npm version][npm-image]][npm-url]
+# yps
 
 a reversible, transparent spy for functions/methods
+
+[![Build Status][travis-image]][travis-url] [![npm version][npm-image]][npm-url]
 
 ### Infiltration
 
