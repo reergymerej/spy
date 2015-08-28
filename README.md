@@ -1,6 +1,6 @@
 # yps [![Build Status][travis-image]][travis-url] [![npm version][npm-image]][npm-url]
 
-a module for spying on function calls
+easily spy on function/method calls
 
 ```js
 var spy = require('yps');

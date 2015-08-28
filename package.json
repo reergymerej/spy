@@ -1,7 +1,7 @@
 {
   "name": "yps",
   "version": "2.0.0",
-  "description": "a module for spying on function calls",
+  "description": "easily spy on function/method calls",
   "main": "bin/app.js",
   "scripts": {
     "test": "mocha --reporter spec"
