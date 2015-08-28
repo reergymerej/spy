@@ -100,3 +100,13 @@ describe('function', function () {
     });
   });
 });
+
+describe('purging', function () {
+  it('should forget recorded calls', function () {
+    var foo = function () {};
+    foo = app.infiltrate(foo);
+    foo();
+    foo.purge();
+    will(foo.calls.length).be(0);
+  });
+});

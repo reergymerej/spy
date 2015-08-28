@@ -2,7 +2,7 @@
 
 var addSpy = function (fn) {
   return (function () {
-    var spy = function spy() {
+    var spy = function () {
       var args = Array.prototype.slice.apply(arguments);
       spy.calls.push(args);
       fn.apply(this, args);
@@ -10,6 +10,9 @@ var addSpy = function (fn) {
 
     spy.fn = fn;
     spy.calls = [];
+    spy.purge = function () {
+      this.calls = [];
+    };
 
     return spy;
   }());
