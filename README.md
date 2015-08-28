@@ -1,24 +1,53 @@
 # yps [![Build Status][travis-image]][travis-url] [![npm version][npm-image]][npm-url]
 
-easily spy on function/method calls
+a reversible, transparent spy for functions/methods
 
+### Infiltration
+
+**functions**
 ```js
-var spy = require('yps');
-var obj = { foo: function () {} };
+var logHello = function () { console.log('Hello!'); };
+logHello = yps.infiltrate(logHello);
+```
 
-spy(obj, 'foo');
+**methods**
+```js
+var scope = {
+  logHello: function () { console.log('Hello!'); }
+};
+yps.infiltrate(scope, 'logHello');
+```
 
-obj.foo(1, 2, 3);
-obj.foo(4);
-obj.foo(5, 6, 7, 8, 9);
+### Reports
 
-console.log(obj.foo.calls[0]);  // [1, 2, 3]
-console.log(obj.foo.calls[1]);  // [4]
-console.log(obj.foo.calls[2]);  // [5, 6, 7, 8, 9]
+Once a spy has infiltrated, it will record the arguments for each call.
+```js
+logHello(42, 'purple');
+logHello();
+logHello.calls;  // [[42, 'purple'], []]
+```
 
+You can purge the calls (in case your spy gets burned).
+```js
+logHello.purge();
+logHello.calls;  // []
+```
+
+### Exfiltration
+
+Remove your spy and any trace that it ever existed.
+
+**functions**
+```js
+logHello = yps.exfiltrate(logHello);
+```
+
+**methods**
+```js
+yps.exfiltrate(scope, 'logHello');
 ```
 
 [travis-image]: https://travis-ci.org/reergymerej/spy.svg
 [travis-url]: https://travis-ci.org/reergymerej/spy
 [npm-image]: https://badge.fury.io/js/yps.svg
-[npm-url]: (http://badge.fury.io/js/yps)
+[npm-url]: https://www.npmjs.com/package/yps
