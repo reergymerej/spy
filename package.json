@@ -2,7 +2,7 @@
   "name": "yps",
   "version": "2.0.1",
   "description": "a reversible, transparent spy for functions/methods",
-  "main": "bin/app.js",
+  "main": "app.js",
   "scripts": {
     "test": "mocha --reporter spec"
   },

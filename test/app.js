@@ -1,7 +1,7 @@
 'use strict';
 
 var will = require('willy').will;
-var yps = require('../bin/yps.js');
+var yps = require('../app.js');
 
 describe('method', function () {
   var foo;
