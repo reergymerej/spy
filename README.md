@@ -49,7 +49,7 @@ logHello = yps.exfiltrate(logHello);
 yps.exfiltrate(scope, 'logHello');
 ```
 
-[travis-image]: https://travis-ci.org/reergymerej/spy.svg
-[travis-url]: https://travis-ci.org/reergymerej/spy
+[travis-image]: https://travis-ci.org/reergymerej/yps.svg
+[travis-url]: https://travis-ci.org/reergymerej/yps
 [npm-image]: https://badge.fury.io/js/yps.svg
 [npm-url]: https://www.npmjs.com/package/yps
