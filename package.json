@@ -1,6 +1,6 @@
 {
   "name": "yps",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "a reversible, transparent spy for functions/methods",
   "main": "app.js",
   "scripts": {
@@ -16,7 +16,9 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "fn-injector": "^1.0.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/reergymerej/yps.git"

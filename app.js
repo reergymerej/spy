@@ -1,21 +1,22 @@
 'use strict';
 
+var fnInjector = require('fn-injector');
+
 var addSpy = function (fn) {
-  return (function () {
-    var spy = function () {
-      var args = Array.prototype.slice.apply(arguments);
-      spy.calls.push(args);
-      fn.apply(this, args);
-    };
 
-    spy.fn = fn;
-    spy.calls = [];
-    spy.purge = function () {
-      this.calls = [];
-    };
+  var spy = fnInjector(fn, function (fn) {
+    var args = Array.prototype.slice.apply(arguments).splice(1);
+    spy.calls.push(args);
+    fn.apply(this, args);
+  });
 
-    return spy;
-  }());
+  spy.fn = fn;
+  spy.calls = [];
+  spy.purge = function () {
+    this.calls = [];
+  };
+
+  return spy;
 };
 
 var removeSpy = function (spy) {
